@@ -19,21 +19,15 @@ body {
 }
 
 header {
-    background-color: #005baa;
+    background-color: #4195df;
     color: white;
     padding: 20px 0;
 }
 
 .logo h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
 }
-
-.logo h2 {
-    font-size: 1.8rem;
-    font-weight: normal;
-}
-
 .hero {
     padding: 60px 0;
     text-align: center;
@@ -47,9 +41,9 @@ header {
 
 .services {
     display: flex;
-    justify-content: center;
     gap: 30px;
     margin-bottom: 50px;
+    text-align: right;
     flex-wrap: wrap;
 }
 
@@ -66,6 +60,47 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+}
+
+#agenda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hwb(0 100% 0%);
+    padding: 30px;
+    border-radius: 15px;
+    order: 1;
+    
+
+}
+#fila{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hwb(0 100% 0%);
+    padding: 30px;
+    border-radius: 15px;
+    order: 2;
+}
+
+@media (max-width: 768px) {
+    #agenda{
+        order: 1;
+    }
+   #fila{
+    order: 2;
+   }
+}
+
+#prancheta {
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
+}
+#filaimg{
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .btn {
