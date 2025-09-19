@@ -69,9 +69,6 @@ header {
     background-color: hwb(0 100% 0%);
     padding: 30px;
     border-radius: 15px;
-    order: 1;
-    
-
 }
 #fila{ 
     display: flex;
@@ -80,7 +77,6 @@ header {
     background-color: hwb(0 100% 0%);
     padding: 30px;
     border-radius: 15px;
-    order: 2;
 }
 
 @media (max-width: 768px) {
