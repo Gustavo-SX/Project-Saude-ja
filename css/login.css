@@ -25,16 +25,21 @@ body {
 }
 
 .form-box {
-     position: absolute;
-     right: 0;
-     width: 50%;
-     height: 100%;
-     background: seagreen;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
     display: flex;
     align-items: center;
     color: #333;
     text-align: center;
     padding: 40px;
+    z-index: 1;
+}
+
+.form-box.register {
+    visibility: hidden;
 }
 
 form {
@@ -105,7 +110,7 @@ form {
     margin: 15px 0;
 }
 
-.social-icons a{
+.social-icons a {
     display: inline-flex;
     padding: 10px;
     border: 2px solid #ccc;
@@ -114,4 +119,11 @@ form {
     color: #333;
     text-decoration: none;
     margin: 0 8px;
+}
+
+.toggle-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
 }
