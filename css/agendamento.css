@@ -24,7 +24,7 @@ header {
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
 }
 
 .logo h1 {
@@ -40,7 +40,7 @@ header {
 .back-btn {
     color: white;
     text-decoration: none;
-    padding: 8px 15px;
+    padding: 10px 15px;
     border: 1px solid white;
     border-radius: 5px;
 }
@@ -67,7 +67,7 @@ header {
 .week-days {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    gap: 5px;
+    gap: 40px;
     margin-bottom: 10px;
     text-align: center;
     font-weight: bold;
