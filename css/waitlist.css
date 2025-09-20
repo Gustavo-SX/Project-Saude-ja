@@ -40,7 +40,7 @@ header {
 .back-btn {
     color: white;
     text-decoration: none;
-    padding: 8px 15px;
+    padding: 10px 15px;
     border: 1px solid white;
     border-radius: 5px;
 }
@@ -130,12 +130,6 @@ hr {
     display: block;
 }
 
-.patient-item .checkmark:after, .postcao-item .checkmark:after {
-    left: 7px;
-    top: 3px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
+#pacientes{
+    padding-left: 10px;
 }

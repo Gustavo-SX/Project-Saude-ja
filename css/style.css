@@ -19,14 +19,20 @@ body {
 }
 
 header {
-    background-color: #4195df;
+    background-color: #005baa;
     color: white;
     padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 
 .logo h1 {
     font-size: 2rem;
     font-weight: bold;
+    padding-bottom: 26px;
+
 }
 .hero {
     padding: 60px 0;
