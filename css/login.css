@@ -173,12 +173,12 @@ form {
     transition: .6s ease-in-out;
 }
 
-.toggle-panel.toggle.left {
+.toggle-panel.toggle-left {
     left: 0;
     transition-delay: 1.2s;
 }
 
-.container.active .toggle-panel.toggle.left {
+.container.active .toggle-panel.toggle-left {
     left: -50%;
     transition: .6s;
 }
@@ -240,11 +240,11 @@ form {
         height: 30%;
     }
 
-    .toggle-panel.toggle.left {
+    .toggle-panel.toggle-left {
         top: 0;
     }
 
-    .container.active .toggle-panel.toggle.left {
+    .container.active .toggle-panel.toggle-left {
         left: 0;
         top: -30%;
 
