@@ -8,9 +8,6 @@ O projeto foi criado no contexto de extensão acadêmica, visando facilitar o ac
 ## 📖 Sumário
 - [Sobre](#sobre)
 - [Funcionalidades](#funcionalidades)
-- [Estrutura de Pastas](#estrutura-de-pastas)
-- [Como Executar Localmente](#como-executar-localmente)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Licença](#licença)
 
 ---
@@ -32,26 +29,6 @@ Esse sistema pode ser usado como modelo para implementar posteriormente soluçõ
 - Tela de **agendamento** para simulação de novos atendimentos.  
 - Exibição de informações básicas de fila (quantidade de pessoas e tempo de espera).  
 - Navegação entre páginas HTML.  
-
----
-
-## 🗂 Estrutura de Pastas
-Project-Saude-ja/
-│── css/
-│ └── estilos.css
-│
-│── image/
-│ └── (imagens e ícones do projeto)
-│
-│── js/
-│ └── script.js
-│
-│── index.html
-│── login.html
-│── waitlist.html
-│── agendamento.html
-│── README.md
-
 
 ---
 
