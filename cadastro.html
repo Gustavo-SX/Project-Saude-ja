@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro UBS - UBS Saúde Já</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <i class="fas fa-hospital-symbol"></i>
+                    <span class="brand-text">SAÚDE JÁ</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Início</a></li>
+                    <li><a href="agendamento.html" class="nav-link">Agendamento</a></li>
+                    <li><a href="fila.html" class="nav-link">Fila de Espera</a></li>
+                    <li><a href="cadastro.html" class="nav-link active">Cadastro UBS</a></li>
+                    <li><a href="#" class="btn-corners">Portal do Paciente</a></li>
+                </ul>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Cadastro de UBS</h1>
+            <p class="page-subtitle">Registre novas unidades básicas de saúde no sistema</p>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="registration-section">
+        <div class="container">
+            <div class="registration-grid">
+                <!-- Form Card -->
+                <div class="registration-card">
+                    <div class="registration-header">
+                        <h2><i class="fas fa-hospital-alt"></i> Informações da UBS</h2>
+                        <p>Preencha todos os campos obrigatórios</p>
+                    </div>
+
+                    <form id="ubsForm" class="ubs-form">
+                        <!-- Basic Information -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">
+                                <i class="fas fa-info-circle"></i>
+                                Informações Básicas
+                            </h3>
+                            <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label for="ubsName"><i class="fas fa-building"></i> Nome da Unidade *</label>
+                                    <input type="text" id="ubsName" required placeholder="Ex: UBS Centro">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ubsCNPJ"><i class="fas fa-id-card-alt"></i> CNPJ *</label>
+                                    <input type="text" id="ubsCNPJ" required placeholder="00.000.000/0000-00" maxlength="18">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ubsCNES"><i class="fas fa-hashtag"></i> Código CNES *</label>
+                                    <input type="text" id="ubsCNES" required placeholder="0000000" maxlength="7">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Endereço
+                            </h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="cep"><i class="fas fa-mailbox"></i> CEP *</label>
+                                    <input type="text" id="cep" required placeholder="00000-000" maxlength="9">
+                                </div>
+                                <div class="form-group">
+                                    <label for="street"><i class="fas fa-road"></i> Rua *</label>
+                                    <input type="text" id="street" required placeholder="Nome da rua">
+                                </div>
+                                <div class="form-group">
+                                    <label for="number"><i class="fas fa-hashtag"></i> Número *</label>
+                                    <input type="text" id="number" required placeholder="123">
+                                </div>
+                                <div class="form-group">
+                                    <label for="complement"><i class="fas fa-plus"></i> Complemento</label>
+                                    <input type="text" id="complement" placeholder="Apto, Sala, etc">
+                                </div>
+                                <div class="form-group">
+                                    <label for="neighborhood"><i class="fas fa-map"></i> Bairro *</label>
+                                    <input type="text" id="neighborhood" required placeholder="Nome do bairro">
+                                </div>
+                                <div class="form-group">
+                                    <label for="city"><i class="fas fa-city"></i> Cidade *</label>
+                                    <input type="text" id="city" required placeholder="Nome da cidade">
+                                </div>
+                                <div class="form-group">
+                                    <label for="state"><i class="fas fa-flag"></i> Estado *</label>
+                                    <select id="state" required>
+                                        <option value="">Selecione</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">
+                                <i class="fas fa-phone-alt"></i>
+                                Contato
+                            </h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="phone1"><i class="fas fa-phone"></i> Telefone Principal *</label>
+                                    <input type="tel" id="phone1" required placeholder="(00) 0000-0000" maxlength="14">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone2"><i class="fas fa-phone"></i> Telefone Secundário</label>
+                                    <input type="tel" id="phone2" placeholder="(00) 0000-0000" maxlength="14">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="ubsEmail"><i class="fas fa-envelope"></i> Email *</label>
+                                    <input type="email" id="ubsEmail" required placeholder="contato@ubs.gov.br">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Services -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">
+                                <i class="fas fa-stethoscope"></i>
+                                Serviços Oferecidos
+                            </h3>
+                            <div class="services-grid">
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="services" value="clinico">
+                                    <span class="checkbox-content">
+                                        <i class="fas fa-user-md"></i>
+                                        <span>Clínico Geral</span>
+                                    </span>
+                                </label>
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="services" value="pediatria">
+                                    <span class="checkbox-content">
+                                        <i class="fas fa-baby"></i>
+                                        <span>Pediatria</span>
+                                    </span>
+                                </label>
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="services" value="ginecologia">
+                                    <span class="checkbox-content">
+                                        <i class="fas fa-female"></i>
+                                        <span>Ginecologia</span>
+                                    </span>
+                                </label>
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="services" value="odontologia">
+                                    <span class="checkbox-content">
+                                        <i class="fas fa-tooth"></i>
+                                        <span>Odontologia</span>
+                                    </span>
+                                </label>
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="services" value="vacinas">
+                                    <span class="checkbox-content">
+                                        <i class="fas fa-syringe"></i>
+                                        <span>Vacinas</span>
+                                    </span>
+                                </label>
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="services" value="exames">
+                                    <span class="checkbox-content">
+                                        <i class="fas fa-flask"></i>
+                                        <span>Exames</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Operating Hours -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">
+                                <i class="fas fa-clock"></i>
+                                Horário de Funcionamento
+                            </h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="openTime"><i class="fas fa-door-open"></i> Abertura *</label>
+                                    <input type="time" id="openTime" required value="07:00">
+                                </div>
+                                <div class="form-group">
+                                    <label for="closeTime"><i class="fas fa-door-closed"></i> Fechamento *</label>
+                                    <input type="time" id="closeTime" required value="18:00">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="description"><i class="fas fa-align-left"></i> Descrição/Observações</label>
+                                    <textarea id="description" rows="4" placeholder="Informações adicionais sobre a unidade..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-actions">
+                            <button type="reset" class="btn-secondary">
+                                <i class="fas fa-times"></i> Limpar
+                            </button>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-save"></i> Cadastrar UBS
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Info Sidebar -->
+                <div class="info-sidebar">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <h3>Informações Importantes</h3>
+                        <ul class="info-list">
+                            <li><i class="fas fa-check"></i> Preencha todos os campos obrigatórios</li>
+                            <li><i class="fas fa-check"></i> Verifique o CNPJ e código CNES</li>
+                            <li><i class="fas fa-check"></i> Selecione os serviços oferecidos</li>
+                            <li><i class="fas fa-check"></i> Confirme os dados antes de enviar</li>
+                        </ul>
+                    </div>
+
+                    <div class="stats-card">
+                        <h3><i class="fas fa-chart-bar"></i> Estatísticas</h3>
+                        <div class="stat-item">
+                            <span class="stat-number">45</span>
+                            <span class="stat-label">UBS Cadastradas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">120</span>
+                            <span class="stat-label">Profissionais Ativos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15.000+</span>
+                            <span class="stat-label">Pacientes Atendidos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>UBS Cadastrada com Sucesso!</h3>
+            <p>A unidade foi registrada no sistema.</p>
+            <p class="modal-details">Código de registro: <strong id="registrationCode">UBS-2025-001</strong></p>
+            <div class="modal-actions">
+                <button class="btn-primary" onclick="closeModal()">
+                    Fechar
+                </button>
+                <button class="btn-secondary" onclick="location.reload()">
+                    Cadastrar Outra
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <i class="fas fa-hospital-symbol"></i>
+                        <span>UBS Saúde Já</span>
+                    </div>
+                    <p class="footer-text">Cuidando da sua saúde com tecnologia e humanização.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Contato</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> alunosads@uninassau</li>
+                        <li><i class="fas fa-envelope"></i> contato@saudeja</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cadastro.js"></script>
+</body>
+</html>
