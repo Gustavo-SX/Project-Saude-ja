@@ -3,75 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamento - UBS Caudemais</title>
-    <link rel="stylesheet" href="css/agendamento.css">
+    <title>Agendamento Online - UBS Saúde Mais</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>SAÚDE JÁ</h1>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <i class="fas fa-hospital-symbol"></i>
+                    <span class="brand-text">UBS</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Início</a></li>
+                    <li><a href="agendamento.html" class="nav-link active">Agendamento</a></li>
+                    <li><a href="fila.html" class="nav-link">Fila de Espera</a></li>
+                    <li><a href="cadastro.html" class="nav-link">Cadastro UBS</a></li>
+                    <li><a href="#" class="btn-corners">Portal do Paciente</a></li>
+                </ul>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-            <a href="index.html" class="back-btn">Voltar</a>
-        </div>
+        </nav>
     </header>
-    <main>
+
+    <!-- Page Header -->
+    <section class="page-header">
         <div class="container">
-            <h1 class="page-title">Passo 1: Selecione data e hora</h1>
-            
-            <div class="calendar-section">
-                <h2>Escolha a data desejada</h2>
-                <div class="calendar">
-                 <input type="date">
-                </div>
-            </div>
-            
-            <div class="time-section">
-                <h2>Hórario desejado</h2>
-                <div class="time-slots">
-                    <div class="time-option">
-                        <span>9:00 AM</span>
-                        <button class="select-btn">Select</button>
-                    </div>
-                    <div class="time-option">
-                        <span>10:30 AM</span>
-                        <button class="select-btn">Select</button>
-                    </div>
-                    <div class="time-option">
-                        <span>2:00 PM</span>
-                        <button class="select-btn">Select</button>
-                    </div>
-                    <div class="time-option">
-                        <span>2:00 PM</span>
-                        <button class="select-btn">Select</button>
+            <h1 class="page-title">Agendamento Online</h1>
+            <p class="page-subtitle">Agende sua consulta de forma rápida e prática</p>
+        </div>
+    </section>
+
+    <!-- Scheduling Section -->
+    <section class="scheduling-section">
+        <div class="container">
+            <div class="scheduling-card">
+                <div class="scheduling-header">
+                    <h2><i class="fas fa-calendar-check"></i> Preencha os Dados</h2>
+                    <div class="steps">
+                        <div class="step active" data-step="1">
+                            <span class="step-number">1</span>
+                            <span class="step-label">Dados</span>
+                        </div>
+                        <div class="step" data-step="2">
+                            <span class="step-number">2</span>
+                            <span class="step-label">Data/Hora</span>
+                        </div>
+                        <div class="step" data-step="3">
+                            <span class="step-number">3</span>
+                            <span class="step-label">Confirmação</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="personal-info">
-                <h2>Dados necessários</h2>
-                <div class="options">
-                    <label class="form-group">
-                    <label for="cpf">CPF</label>
-                    <input type="cpf" id="cpf" placeholder="Ex: 000.000.000-00">
-                    </label>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email">
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone">
-                </div>
-            
-                <button class="next-btn">Next</button>
+
+                <form id="schedulingForm" class="scheduling-form">
+                    <!-- Step 1: Personal Info -->
+                    <div class="form-step active" id="step1">
+                        <h3 class="form-step-title">Informações Pessoais</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="fullName"><i class="fas fa-user"></i> Nome Completo</label>
+                                <input type="text" id="fullName" required placeholder="Digite seu nome completo">
+                            </div>
+                            <div class="form-group">
+                                <label for="cpf"><i class="fas fa-id-card"></i> CPF</label>
+                                <input type="text" id="cpf" required placeholder="000.000.000-00" maxlength="14">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthDate"><i class="fas fa-calendar"></i> Data de Nascimento</label>
+                                <input type="date" id="birthDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone"><i class="fas fa-phone"></i> Telefone</label>
+                                <input type="tel" id="phone" required placeholder="(00) 00000-0000" maxlength="15">
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                                <input type="email" id="email" required placeholder="seu@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="specialty"><i class="fas fa-stethoscope"></i> Especialidade</label>
+                                <select id="specialty" required>
+                                    <option value="">Selecione uma especialidade</option>
+                                    <option value="clinico">Clínico Geral</option>
+                                    <option value="pediatria">Pediatria</option>
+                                    <option value="ginecologia">Ginecologia</option>
+                                    <option value="cardiologia">Cardiologia</option>
+                                    <option value="dermatologia">Dermatologia</option>
+                                    <option value="oftalmologia">Oftalmologia</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-primary" onclick="nextStep(2)">
+                                Próximo <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Date & Time -->
+                    <div class="form-step" id="step2">
+                        <h3 class="form-step-title">Selecione Data e Horário</h3>
+                        <div class="datetime-grid">
+                            <div class="calendar-container">
+                                <div class="calendar-header">
+                                    <button type="button" class="calendar-nav" onclick="previousMonth()">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <span id="currentMonth" class="calendar-title">Janeiro 2025</span>
+                                    <button type="button" class="calendar-nav" onclick="nextMonth()">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                                <div class="calendar" id="calendar"></div>
+                            </div>
+                            <div class="time-slots">
+                                <h4><i class="fas fa-clock"></i> Horários Disponíveis</h4>
+                                <div id="timeSlots" class="time-slots-grid">
+                                    <p class="select-date-msg">Selecione uma data para ver os horários disponíveis</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary" onclick="previousStep(1)">
+                                <i class="fas fa-arrow-left"></i> Voltar
+                            </button>
+                            <button type="button" class="btn-primary" onclick="nextStep(3)">
+                                Próximo <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Confirmation -->
+                    <div class="form-step" id="step3">
+                        <h3 class="form-step-title">Confirme seus Dados</h3>
+                        <div class="confirmation-card">
+                            <div class="confirmation-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h4>Revise as Informações</h4>
+                            <div class="confirmation-details" id="confirmationDetails">
+                                <!-- Details will be inserted here -->
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary" onclick="previousStep(2)">
+                                <i class="fas fa-arrow-left"></i> Voltar
+                            </button>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-check"></i> Confirmar Agendamento
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-    </main>
+    </section>
 
-    <script src="js/agendamento.js"></script>
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Agendamento Confirmado!</h3>
+            <p>Seu agendamento foi realizado com sucesso.</p>
+            <p class="modal-details">Você receberá um email de confirmação em breve.</p>
+            <div class="modal-actions">
+                <button class="btn-primary" onclick="closeModal()">
+                    Fechar
+                </button>
+                <a href="index.html" class="btn-secondary">Voltar ao Início</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <i class="fas fa-hospital-symbol"></i>
+                        <span>UBS Saúde Mais</span>
+                    </div>
+                    <p class="footer-text">Cuidando da sua saúde com tecnologia e humanização.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Contato</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> 0800 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> contato@ubs.gov.br</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 UBS Saúde Mais. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="agendamento.js"></script>
 </body>
 </html>

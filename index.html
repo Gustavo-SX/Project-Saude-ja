@@ -3,46 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UBS SAÚDE JÁ</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <title>UBS Saúde Já - Sistema de Atendimento</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>SAÚDE JÁ
-                <i id="icon" class='bx bxs-user-circle'></i>
-                
-                </h1>
-                  <div class="container">
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <i class="fas fa-hospital-symbol"></i>
+                    <span class="brand-text">SAÚDE JÁ</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active">Início</a></li>
+                    <li><a href="agendamento.html" class="nav-link">Agendamento</a></li>
+                    <li><a href="fila.html" class="nav-link">Fila de Espera</a></li>
+                    <li><a href="cadastro.html" class="nav-link">Cadastro UBS</a></li>
+                    <li><a href="#" class="btn-corners">Portal do Paciente</a></li>
+                </ul>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <main>
-        <section class="hero">
-                <div class="buttons">
-                    <div id="agenda">
-                        <img id="prancheta" src="image/prancheta.png" alt="prancheta">
-                        <a href="agendamento.html" class="btn">AGENDAMENTO</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-text">
+                        <h1 class="hero-title fade-in">UBS<br><span class="highlight">SAÚDE JÁ</span></h1>
+                        <p class="hero-subtitle fade-in-delay">Atendimento de qualidade, cuidado humanizado. Sistema integrado de gestão de saúde pública.</p>
+                        <div class="hero-buttons fade-in-delay-2">
+                            <a href="agendamento.html" class="btn-primary">
+                                <i class="fas fa-calendar-check"></i>
+                                Agendar Consulta
+                            </a>
+                            <a href="fila.html" class="btn-secondary">
+                                <i class="fas fa-clock"></i>
+                                Ver Fila
+                            </a>
+                        </div>
                     </div>
-                    
-                    <div id="fila">
-                        <img id="filaimg" src="image/lista-de-espera.png" alt="fila">
-                        <a href="waitlist.html" class="btn">FILA DE ESPERA</a></div>
+                    <div class="hero-image fade-in-right">
+                        <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=500&fit=crop" alt="Equipe médica">
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L60 10C120 20 240 40 360 46.7C480 53 600 47 720 43.3C840 40 960 40 1080 46.7C1200 53 1320 67 1380 73.3L1440 80V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z" fill="white"/>
+            </svg>
+        </div>
+    </section>
 
-    <footer>
+    <!-- Services Section -->
+    <section class="services">
         <div class="container">
-            <p>Projeto desenvolvido por alunos de Análise e Desenvolvimento de Sistemas.</p>
+            <div class="section-header">
+                <span class="section-badge">Nossos Serviços</span>
+                <h2 class="section-title">Como Podemos Ajudar</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="service-title">Agendamento Online</h3>
+                    <p class="service-description">Agende suas consultas de forma rápida e prática, escolhendo data e horário disponível.</p>
+                    <a href="agendamento.html" class="service-link">
+                        Agendar Agora <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-list-ol"></i>
+                    </div>
+                    <h3 class="service-title">Acompanhe a Fila</h3>
+                    <p class="service-description">Monitore sua posição na fila de espera em tempo real, sem precisar estar na unidade.</p>
+                    <a href="fila.html" class="service-link">
+                        Ver Fila <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3 class="service-title">Cadastro UBS</h3>
+                    <p class="service-description">Cadastre novas unidades básicas de saúde no sistema com informações completas.</p>
+                    <a href="cadastro.html" class="service-link">
+                        Cadastrar <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="service-title">Consultas Especializadas</h3>
+                    <p class="service-description">Acesso a médicos especialistas em diversas áreas da medicina.</p>
+                    <a href="#" class="service-link">
+                        Saiba Mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-number" data-count="15000">0</div>
+                    <div class="stat-label">Pacientes Atendidos</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-hospital"></i>
+                    <div class="stat-number" data-count="45">0</div>
+                    <div class="stat-label">Unidades Cadastradas</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-stethoscope"></i>
+                    <div class="stat-number" data-count="120">0</div>
+                    <div class="stat-label">Profissionais de Saúde</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-label">Horas de Atendimento</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-content">
+                    <span class="section-badge">Sobre o Sistema</span>
+                    <h2 class="section-title">Tecnologia a Serviço da Saúde</h2>
+                    <p class="info-text">A UBS Saúde Já é uma plataforma moderna e integrada que facilita o acesso aos serviços de saúde pública. Com recursos de agendamento online, acompanhamento de filas e gestão de unidades, tornamos o atendimento mais eficiente e humanizado.</p>
+                    <ul class="info-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Interface intuitiva e fácil de usar</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Atualizações em tempo real</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Segurança e privacidade de dados</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Acesso 24/7 de qualquer dispositivo</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="info-image">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=500&fit=crop" alt="Tecnologia médica">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <i class="fas fa-hospital-symbol"></i>
+                        <span>UBS Saúde Já</span>
+                    </div>
+                    <p class="footer-text">Cuidando da sua saúde com tecnologia e humanização.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="agendamento.html">Agendamento</a></li>
+                        <li><a href="fila.html">Fila de Espera</a></li>
+                        <li><a href="cadastro.html">Cadastro UBS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Serviços</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Consultas</a></li>
+                        <li><a href="#">Exames</a></li>
+                        <li><a href="#">Vacinas</a></li>
+                        <li><a href="#">Emergência</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Contatos</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> alunosads@uninassau</li>
+                        <li><i class="fas fa-envelope"></i> contato@ubs.saudeja</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Avenida Jóquei Clube</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
